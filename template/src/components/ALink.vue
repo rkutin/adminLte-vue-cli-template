@@ -1,39 +1,37 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-  	<h2>With an awesome title</h2>
-    <p>But nothing behind...</p>
+
+    <app-info-box :info="info"></app-info-box>
+    <app-info-box :info="info2"></app-info-box>
+
   </div>
 </template>
 
 <script>
+import AppInfoBox from "./layouts/InfoBox";
+
 export default {
-  name: 'alink',
+  name: 'ALink',
+  components: {
+    AppInfoBox,
+  },
   data () {
     return {
-      msg: 'This is a link page'
+      msg: 'This is a link page',
+      info: {
+        title: 'Great title',
+        message: 'A great message',
+        icon: 'fa-star-o',
+        color: 'bg-red',
+      },
+      info2: {
+        title: 'Another info',
+        message: '42,537',
+        icon: 'fa-bullhorn',
+        color: 'bg-green',
+      },
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>

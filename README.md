@@ -88,7 +88,7 @@ If your page is not at the first level in the menu
 
 ### To add a message
 
-Just add a data named `messages`.
+Just add a data named `messages` to `App.vue`.
 
 ```javascript
       messages: [
@@ -106,7 +106,7 @@ Just add a data named `messages`.
 
 ### To add a notification
 
-Just add a data named `notifications`.
+Just add a data named `notifications` to `App.vue`.
 
 ```javascript
       notifications: [
@@ -121,7 +121,7 @@ Just add a data named `notifications`.
 
 ### To add a task
 
-Just add a data named `tasks`.
+Just add a data named `tasks` to `App.vue`.
 
 ```javascript
       tasks: [
@@ -131,6 +131,20 @@ Just add a data named `tasks`.
           percent: 70,
         },
       ],
+```
+
+### Add an info box
+
+- Add the markup in your page ```<app-info-box :info="info"></app-info-box>```
+- Add in the data the ```info```:
+
+```javascript
+      info: {
+        title: 'Great title',
+        message: 'A great message',
+        icon: 'fa-star-o',
+        color: 'bg-red',
+      },
 ```
 
 ## Will arrive in the future
