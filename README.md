@@ -1,12 +1,12 @@
-# vue-webpack-boilerplate
+# adminLTE vueJS template
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+> An adminLTE template for VueJS based on the full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction (maybe not everything will still working after I have updated components).
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> This template is Vue 2.0 compatible. There is no Vue 1.x compatible template, sorry, but feel free to do one.
 
 ## Documentation
 
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
+- [For Webpack template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail (webpack is at the origin of this template, so the doc will be almost valid)
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
 
 ## Usage
@@ -15,7 +15,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init phantase/adminLte-vue-cli-template my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -47,11 +47,3 @@ $ npm run dev
   - Works with one command out of the box:
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
-
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
-```
