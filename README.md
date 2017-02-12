@@ -86,6 +86,18 @@ If your page is not at the first level in the menu
   },
 ```
 
+### To add a header in the menu
+
+Edit `./config/menu.js` to add your header
+
+```javascript
+  {
+    name: 'MY HEADER',
+  },
+```
+
+A header has only a name, no link (otherwise it becomes a link), no icon (it's just ignored).
+
 ### To add a message
 
 Just add a data named `messages` to `App.vue`.

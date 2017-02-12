@@ -1,5 +1,8 @@
 export default [
   {
+    name: 'NAVIGATION',
+  },
+  {
     name: 'Home',
     link: '/',
     icon: 'fa-home',
