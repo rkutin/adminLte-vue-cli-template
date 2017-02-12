@@ -1,8 +1,8 @@
 {
-  "name": "vue-cli-template-webpack",
+  "name": "adminLte-vue-cli-template",
   "version": "2.0.0",
   "license": "MIT",
-  "description": "A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.",
+  "description": "An adminLTE template for VueJS based on the full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.",
   "scripts": {
     "docs": "cd docs && gitbook serve",
     "docs:deploy": "bash ./deploy-docs.sh"
