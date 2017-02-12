@@ -133,9 +133,21 @@ Just add a data named `tasks`.
       ],
 ```
 
-## Work in progress
+## Will arrive in the future
 
-A lot of things right now...
+### Sidebar
+
+- Component to manage the user description
+- Component to manage the search bar
+
+### Header
+
+- Component to manage the user panel
+- Activate/Deactivate the settings button for the `ControlSidebar`
+
+## Content
+
+- Add all the marvelous components that made AdminLTE so interesting
 
 ## What's Included
 
