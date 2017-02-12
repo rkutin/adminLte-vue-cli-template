@@ -1,34 +1,103 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    {{#router}}
-    <router-view></router-view>
-    {{else}}
-    <hello></hello>
-    {{/router}}
+  <div class="wrapper">
+    <app-header :messages="messages" :notifications="notifications" :tasks="tasks"></app-header>
+    <app-sidebar></app-sidebar>
+    <app-content></app-content>
+    <app-footer></app-footer>
+    <app-control-sidebar></app-control-sidebar>
+    <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
   </div>
 </template>
 
 <script>
-{{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import AppHeader from './components/layouts/Header';
+import AppSidebar from './components/layouts/Sidebar';
+import AppContent from './components/layouts/Content';
+import AppFooter from './components/layouts/Footer';
+import AppControlSidebar from './components/layouts/ControlSidebar';
 
-{{/unless}}
+import Menus from './../config/menus';
+
 export default {
-  name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
+  name: 'app',
   components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    AppHeader,
+    AppSidebar,
+    AppContent,
+    AppFooter,
+    AppControlSidebar,
+  },
+  data() {
+    return {
+      menus: Menus,
+      messages: [
+        {
+          id: "1",
+          from: {
+            id: "2",
+            name: "Support Team",
+          },
+          title: "Why not buy a new awesome theme?",
+          datetime: "5 mins",
+        },
+        {
+          id: "42",
+          from: {
+            id: "42",
+            name: "Marvin",
+          },
+          title: "Read the Hitchhiker's Guide to the Galaxy!",
+          datetime: "42 mins",
+        },
+      ],
+      notifications: [
+        {
+          id: "12",
+          message: "Today, it's snowy",
+          icon: "snowflake-o",
+          color: "text-aqua",
+        },
+        {
+          id: "13",
+          message: "Tomorrow, it will be sunny",
+          icon: "fa-sun-o",
+          color: "text-yellow",
+        },
+        {
+          id: "14",
+          message: "Yesterday, it was cloudy",
+          icon: "fa-cloud",
+        },
+      ],
+      tasks: [
+        {
+          id: "99",
+          title: "Read some books",
+          percent: 70,
+        },
+        {
+          id: "100",
+          title: "Listen some musics",
+          percent: 90,
+        },
+        {
+          id: "101",
+          title: "Watch some movies",
+          percent: 10,
+        },
+        {
+          id: "102",
+          title: "Play some video games",
+          percent: 0,
+        },
+      ],
+    }
+  },
+}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="../static/bootstrap/css/bootstrap.min.css"></style>
+<style src="../static/adminLte/css/skins/_all-skins.min.css"></style>
+<style src="../static/adminLte/css/AdminLTE.min.css"></style>

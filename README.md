@@ -4,6 +4,10 @@
 
 > This template is Vue 2.0 compatible. There is no Vue 1.x compatible template, sorry, but feel free to do one.
 
+## Remarks
+
+- `LintConfig AirBnB` has been removed
+
 ## Documentation
 
 - [For Webpack template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail (webpack is at the origin of this template, so the doc will be almost valid)
@@ -19,7 +23,119 @@ $ vue init phantase/adminLte-vue-cli-template my-project
 $ cd my-project
 $ npm install
 $ npm run dev
+
 ```
+## Work with the template
+
+### To add a new page
+
+- Create your page
+
+Create a `.vue` file in `.src/components`, see example page already in this directory to know how to do.
+
+- Add a route to your page
+
+Edit `./src/router/index.js` to add your route
+
+```javascript
+    {
+      path: '/',
+      name: 'Hello',
+      meta: {
+        description: 'Homepage of the application',
+      },
+      component: Hello
+    },
+```
+
+Just follow the standards rules for routes.
+
+Note that `name` and `meta.description` are used as title of the page and optional description of the page (used in original AdminLTE template).
+
+- Add the page in the sidebar menu (if needed)
+
+Edit `./config/menu.js` to add your page
+
+```javascript
+  {
+    name: 'Home',
+    link: '/',
+    icon: 'fa-home',
+  },
+```
+
+If your page is not at the first level in the menu
+
+```javascript
+  {
+    name: 'A multilevel item',
+    link: '',
+    icon: 'fa-th-list',
+    child: [
+      {
+        name: 'A first link',
+        link: '/multilevel/first',
+        icon: 'fa-link',
+      },
+      {
+        name: 'A second link',
+        link: '/multilevel/second',
+        icon: 'fa-link',
+      },
+    ]
+  },
+```
+
+### To add a message
+
+Just add a data named `messages`.
+
+```javascript
+      messages: [
+        {
+          id: "42",
+          from: {
+            id: "42",
+            name: "Marvin",
+          },
+          title: "Read the Hitchhiker's Guide to the Galaxy!",
+          datetime: "42 mins",
+        },
+      ],
+```
+
+### To add a notification
+
+Just add a data named `notifications`.
+
+```javascript
+      notifications: [
+        {
+          id: "12",
+          message: "Today, it's snowy",
+          icon: "snowflake-o",
+          color: "text-aqua",
+        },
+      ],
+```
+
+### To add a task
+
+Just add a data named `tasks`.
+
+```javascript
+      tasks: [
+        {
+          id: "99",
+          title: "Read some books",
+          percent: 70,
+        },
+      ],
+```
+
+## Work in progress
+
+A lot of things right now...
 
 ## What's Included
 
