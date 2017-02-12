@@ -145,7 +145,7 @@ Just add a data named `tasks`.
 - Component to manage the user panel
 - Activate/Deactivate the settings button for the `ControlSidebar`
 
-## Content
+### Content
 
 - Add all the marvelous components that made AdminLTE so interesting
 
