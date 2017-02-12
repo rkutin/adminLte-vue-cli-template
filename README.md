@@ -147,6 +147,26 @@ Just add a data named `tasks` to `App.vue`.
       },
 ```
 
+### Add an info box (version 2)
+
+- Add the markup in your page ```<app-info-box2 :info="info"></app-info-box2>```
+- Add in the data the ```info```:
+
+```javascript
+      info: {
+        title: 'Another info',
+        message: '42,537',
+        icon: 'fa-bullhorn',
+        color: 'bg-green',
+        progress: {
+          percent: 30,
+          description: "30% complete today",
+        }
+      },
+```
+
+- Note that the `progress` object is optional, if you don't provide it, the progress bar won't be displayed
+
 ## Will arrive in the future
 
 ### Sidebar
