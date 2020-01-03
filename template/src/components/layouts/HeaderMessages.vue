@@ -7,7 +7,7 @@
               <span class="label label-success">{{ messages.length }}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have {{ messages.length }} message{{ messages.length > 1 ? 's' : '' }}</li>
+              <li class="header">You have {{ messages.length }} message</li>
               <li>
                 <!-- inner menu: contains the messages -->
                 <ul class="menu">
