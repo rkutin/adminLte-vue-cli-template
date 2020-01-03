@@ -7,7 +7,7 @@
               <span class="label label-danger">{{ tasks.length }}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have {{ tasks.length }} task{{ tasks.length > 1 ? 's' : '' }}</li>
+              <li class="header">You have {{ tasks.length }} task</li>
               <li>
                 <!-- Inner menu: contains the tasks -->
                 <ul class="menu">
