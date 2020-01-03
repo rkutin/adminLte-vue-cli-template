@@ -7,7 +7,7 @@
               <span class="label label-warning">{{ notifications.length }}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have {{ notifications.length }} notification{{ notifications.length > 1 ? 's' : '' }}</li>
+              <li class="header">You have {{ notifications.length }} notification</li>
               <li>
                 <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
